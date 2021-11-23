@@ -39,6 +39,8 @@ body {
   display: inline-block;
   background: #fff;
   cursor: pointer;
+  border: none;
+  border-radius: 50%;
 }
 .content {
   position: absolute;
