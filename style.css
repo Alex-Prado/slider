@@ -46,8 +46,9 @@ body {
   color: #000;
 }
 .acciones .slider:hover {
-  background: #000;
+  background: #333;
   color: #fff;
+  border: 1px solid #ddd;
 }
 .content {
   position: absolute;
@@ -56,7 +57,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 1.5s ease-in;
+  transition: 1s ease-in;
   transform: scale(0.5);
   visibility: hidden;
   filter: opacity(0);
@@ -65,7 +66,7 @@ body {
   visibility: visible;
   filter: opacity(1);
   transform: scale(1);
-  transition: 1.5s ease-in;
+  transition: 1s ease-in;
 }
 .content .img {
   width: 100%;
@@ -81,11 +82,11 @@ body {
   align-items: center;
   justify-content: center;
   left: -150px;
-  transition: 1.5s ease-in;
+  transition: 1s ease-in;
 }
 .content.active .card {
   left: 10%;
-  transition: 1.5s ease-in;
+  transition: 1s ease-in;
 }
 .card img {
   margin-left: 15px;
