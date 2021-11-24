@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="prueba.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="botones">
+        <i class="mas aqui fa fa-angle-left" aria-hidden="true"></i>
+        <i class="menos aqui fa fa-angle-right" aria-hidden="true"></i>
+        <!-- <button class="">aqui</button>
+        <button class="menos aqui">aqui</button> -->
+      </div>
+      <div class="carrusel">
+        <i class="carr active"></i>
+        <i class="carr"></i>
+        <i class="carr"></i>
+        <i class="carr"></i>
+      </div>
+      <div class="content">
+        <div class="img1 img active">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
+            non saepe maxime sint recusandae laboriosam officiis doloribus natus
+            ducimus.
+          </p>
+        </div>
+        <div class="img2 img">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
+            non saepe maxime sint recusandae laboriosam officiis doloribus natus
+            ducimus.
+          </p>
+        </div>
+        <div class="img3 img">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
+            non saepe maxime sint recusandae laboriosam officiis doloribus natus
+            ducimus.
+          </p>
+        </div>
+        <div class="img4 img">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
+            non saepe maxime sint recusandae laboriosam officiis doloribus natus
+            ducimus.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const aqui = document.querySelector(".aqui");
+      const content = document.querySelector(".content");
+      const container = document.querySelector(".container");
+      const imagen = document.querySelectorAll(".img");
+      const carr = document.querySelectorAll(".carr");
+      let rotar = 0;
+      let contador = 0;
+      // ---------------------------
+      // ---------------------------
+      const ancho = 500;
+      const largo = 500;
+      const distancia = largo + 200;
+      const cajaancho = 200;
+      const cajalargo = 200;
+      const res = (ancho - cajaancho) / 2;
+
+      imagen.forEach((imag) => {
+        imag.style.width = `${ancho}px`;
+        imag.style.height = `${largo}px`;
+      });
+
+      content.style.width = `${cajaancho}px`;
+      content.style.height = `${cajaancho}px`;
+
+      imagen[0].style.top = `-${distancia}px`;
+
+      imagen[1].style.left = `-${distancia}px`;
+      imagen[1].style.top = `-${res}px`;
+
+      imagen[2].style.bottom = `-${distancia}px`;
+
+      imagen[3].style.right = `-${distancia}px`;
+      imagen[3].style.top = `-${res}px`;
+
+      aqui.addEventListener("click", () => {
+        contador++;
+        imagen.forEach((img) => {
+          img.classList.remove("active");
+        });
+        carr.forEach((car) => {
+          car.classList.remove("active");
+        });
+        if (contador > imagen.length - 1) {
+          contador = 0;
+        }
+        imagen[contador].classList.add("active");
+        carr[contador].classList.add("active");
+        rotar = rotar + 90;
+        content.style.transform = `rotate(${rotar}deg)`;
+
+        console.log(imagen.length);
+      });
+    </script>
+  </body>
+</html>
