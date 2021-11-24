@@ -16,9 +16,10 @@
   </head>
   <body>
     <div class="container">
+      <h1 class="nombre">PROGRAMACION</h1>
       <div class="botones">
-        <i class="mas aqui fa fa-angle-left" aria-hidden="true"></i>
-        <i class="menos aqui fa fa-angle-right" aria-hidden="true"></i>
+        <i class="menos aqui fa fa-angle-left" aria-hidden="true"></i>
+        <i class="mas aqui fa fa-angle-right" aria-hidden="true"></i>
         <!-- <button class="">aqui</button>
         <button class="menos aqui">aqui</button> -->
       </div>
@@ -30,48 +31,101 @@
       </div>
       <div class="content">
         <div class="img1 img active">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
-            non saepe maxime sint recusandae laboriosam officiis doloribus natus
-            ducimus.
-          </p>
+          <h1>CSS</h1>
+          <div class="card">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
+              non saepe maxime sint recusandae laboriosam officiis doloribus
+              natus ducimus.
+            </p>
+            <img src="img/css.png" alt="" />
+          </div>
         </div>
         <div class="img2 img">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
-            non saepe maxime sint recusandae laboriosam officiis doloribus natus
-            ducimus.
-          </p>
+          <h1>PYTHON</h1>
+          <div class="card">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
+              non saepe maxime sint recusandae laboriosam officiis doloribus
+              natus ducimus.
+            </p>
+            <img src="img/python.png" alt="" />
+          </div>
         </div>
         <div class="img3 img">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
-            non saepe maxime sint recusandae laboriosam officiis doloribus natus
-            ducimus.
-          </p>
+          <h1>JAVASCRIPT</h1>
+          <div class="card">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
+              non saepe maxime sint recusandae laboriosam officiis doloribus
+              natus ducimus.
+            </p>
+            <img src="img/js.png" alt="" />
+          </div>
         </div>
         <div class="img4 img">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
-            non saepe maxime sint recusandae laboriosam officiis doloribus natus
-            ducimus.
-          </p>
+          <h1>LARAVEL</h1>
+          <div class="card">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
+              non saepe maxime sint recusandae laboriosam officiis doloribus
+              natus ducimus.
+            </p>
+            <img src="img/laravel.png" alt="" />
+          </div>
         </div>
       </div>
     </div>
     <script>
-      const aqui = document.querySelector(".aqui");
+      const aqui = document.querySelectorAll(".aqui");
       const content = document.querySelector(".content");
       const container = document.querySelector(".container");
       const imagen = document.querySelectorAll(".img");
       const carr = document.querySelectorAll(".carr");
       let rotar = 0;
       let contador = 0;
+
+      // aqui.addEventListener("click", () => {
+      aqui.forEach((accion) =>
+        accion.addEventListener("click", () => {
+          imagen.forEach((img) => {
+            img.classList.remove("active");
+          });
+          carr.forEach((car) => {
+            car.classList.remove("active");
+          });
+          if (accion.classList[0] == "mas") {
+            if (contador >= imagen.length - 1) {
+              contador = 0;
+            } else {
+              contador++;
+            }
+            rotar = rotar + 90;
+          } else {
+            if (contador <= 0) {
+              contador = imagen.length - 1;
+            } else {
+              contador--;
+            }
+            rotar = rotar - 90;
+          }
+
+          console.log(contador + " sss");
+          imagen[contador].classList.add("active");
+          carr[contador].classList.add("active");
+
+          content.style.transform = `rotate(${rotar}deg)`;
+
+          console.log(imagen.length);
+        })
+      );
+
+      // });
       // ---------------------------
       // ---------------------------
-      const ancho = 500;
-      const largo = 500;
-      const distancia = largo + 200;
+      const ancho = 600;
+      const largo = 600;
+      const distancia = largo + 50;
       const cajaancho = 200;
       const cajalargo = 200;
       const res = (ancho - cajaancho) / 2;
@@ -93,25 +147,6 @@
 
       imagen[3].style.right = `-${distancia}px`;
       imagen[3].style.top = `-${res}px`;
-
-      aqui.addEventListener("click", () => {
-        contador++;
-        imagen.forEach((img) => {
-          img.classList.remove("active");
-        });
-        carr.forEach((car) => {
-          car.classList.remove("active");
-        });
-        if (contador > imagen.length - 1) {
-          contador = 0;
-        }
-        imagen[contador].classList.add("active");
-        carr[contador].classList.add("active");
-        rotar = rotar + 90;
-        content.style.transform = `rotate(${rotar}deg)`;
-
-        console.log(imagen.length);
-      });
     </script>
   </body>
 </html>
