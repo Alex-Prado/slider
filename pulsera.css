@@ -50,7 +50,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: #888;
+  background: var(--colorclaro);
 }
 .menu {
   position: fixed;
@@ -75,6 +75,7 @@ body {
 }
 .menu i {
   font-size: 20px;
+  color: var(--colorclaro);
 }
 .acciones {
   position: absolute;
@@ -132,6 +133,7 @@ body {
   height: 100%;
   background: linear-gradient(45deg, var(--colorprincipal), white);
 }
+
 .content .card {
   width: 70%;
   height: 100%;
@@ -141,6 +143,21 @@ body {
   justify-content: center;
   left: -150px;
   transition: 1s ease;
+  margin-top: 30px;
+}
+.content .card .btn {
+  padding: 10px 15px;
+  border: none;
+  border: 1px solid var(--colortexto);
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+}
+.content .card .btn:hover {
+  background: var(--colorprincipal);
+  color: var(--colorclaro);
+  border: 1px solid var(--colorclaro);
 }
 .content.active .card {
   left: 15%;
@@ -156,13 +173,14 @@ body {
   color: var(--colortexto);
 }
 .texto .titulo {
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   text-transform: uppercase;
   font-size: 35px;
 }
 .texto p {
   font-size: 18px;
   font-weight: 300;
+  /* margin-bottom: 20px; */
 }
 /* ------------------------- */
 /* ------------------------- */
@@ -221,10 +239,10 @@ body {
 .contenido .tarjeta::after {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 98%;
+  height: 16%;
   background: var(--colorprincipal);
-  bottom: -100%;
+  bottom: -17%;
   transition: 0.5s ease-in-out;
 }
 .contenido .tarjeta .oferta {
@@ -255,7 +273,7 @@ body {
 .descripcion {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 40%;
   transition: 0.5s ease-in-out;
   position: absolute;
@@ -264,9 +282,13 @@ body {
   color: var(--colorclaro);
   /* font-weight: 300; */
 }
-.descripcion h4,
-.descripcion h2 {
+.descripcion h4 {
   font-weight: 300;
+  margin: 2px;
+}
+.descripcion h2 {
+  font-weight: 500;
+  margin: 2px;
 }
 .buttons {
   position: absolute;
@@ -284,7 +306,7 @@ body {
 }
 .tarjeta:hover img {
   transform: scale(0.8) translate(-50px, -30px);
-  filter: drop-shadow(-5px 7px 6px #000);
+  /* filter: drop-shadow(-5px 7px 6px #000); */
 }
 .tarjeta:hover .descripcion {
   bottom: 5px;
@@ -293,7 +315,7 @@ body {
   right: 5px;
 }
 .tarjeta:hover::after {
-  bottom: -85%;
+  bottom: 1%;
 }
 @media (max-width: 850px) {
   .content.active .card {

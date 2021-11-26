@@ -45,13 +45,14 @@
         <div class="img"></div>
         <div class="card">
           <div class="texto">
-            <h1 class="titulo">PULSERA YING YANG</h1>
+            <h1 class="titulo">PULSERA</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, qui
               aut facere quas ut reiciendis eius quae quo rem neque consequatur
               voluptatibus consectetur quod quaerat quisquam sequi, quasi
               explicabo officiis?
             </p>
+            <span class="btn">Agregar al carrito</span>
           </div>
           <img src="img/11.png" alt="" />
         </div>
@@ -68,6 +69,7 @@
               voluptatibus consectetur quod quaerat quisquam sequi, quasi
               explicabo officiis?
             </p>
+            <span class="btn">Agregar al carrito</span>
           </div>
           <img src="img/zpatilla.png" alt="" />
         </div>
@@ -84,6 +86,7 @@
               voluptatibus consectetur quod quaerat quisquam sequi, quasi
               explicabo officiis?
             </p>
+            <span class="btn">Agregar al carrito</span>
           </div>
           <img src="img/cartera.png" alt="" />
         </div>
@@ -101,7 +104,7 @@
       <div class="contenido">
         <div class="tarjeta">
           <h3>Producto</h3>
-          <img src="img/11.png" alt="" />
+          <img src="img/21.png" alt="" />
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
@@ -126,7 +129,7 @@
         </div>
         <div class="tarjeta">
           <h3>Producto</h3>
-          <img src="img/11.png" alt="" />
+          <img src="img/22.png" alt="" />
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
@@ -151,7 +154,7 @@
         </div>
         <div class="tarjeta">
           <h3>Producto</h3>
-          <img src="img/11.png" alt="" />
+          <img src="img/23.png" alt="" />
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
@@ -177,7 +180,7 @@
         <div class="tarjeta">
           <span class="oferta">40%</span>
           <h3>Producto</h3>
-          <img src="img/11.png" alt="" />
+          <img src="img/24.png" alt="" />
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
@@ -261,7 +264,7 @@
       <div class="contenido">
         <div class="tarjeta">
           <span class="oferta">50%</span>
-          <h3>Cartera</h3>
+          <h3>Producto</h3>
           <img src="img/cartera.png" alt="" />
           <div class="buttons">
             <i
@@ -313,7 +316,7 @@
         <div class="tarjeta">
           <span class="oferta">50%</span>
           <h3>Producto</h3>
-          <img src="img/11.png" alt="" />
+          <img src="img/30.png" alt="" />
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
@@ -338,7 +341,7 @@
         </div>
         <div class="tarjeta">
           <h3>Producto</h3>
-          <img src="img/11.png" alt="" />
+          <img src="img/31.png" alt="" />
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
@@ -363,7 +366,7 @@
         </div>
         <div class="tarjeta">
           <h3>Producto</h3>
-          <img src="img/11.png" alt="" />
+          <img src="img/32.png" alt="" />
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
@@ -388,7 +391,7 @@
         </div>
         <div class="tarjeta">
           <h3>Producto</h3>
-          <img src="img/11.png" alt="" />
+          <img src="img/33.png" alt="" />
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
@@ -491,44 +494,15 @@
         contentModal.classList.toggle("active");
       }
 
-      // function escondermenu() {
-      //   menu.style.top = `-${menu.clientHeight < window.scrollY ? menu.clientHeight : 0}px`;
-      // }
-      // window.addEventListener("scroll", escondermenu);
-
-      // window.onscroll = function () {
-      //   var Y = window.scrollY;
-      //   console.log(Y);
-      // };
-
-      // var scrollpos = 0;
-      // window.addEventListener("scroll", function () {
-      //   if (document.body.getBoundingClientRect().top > scrollpos) {
-      //     console.log("ARRIBA");
-      //     console.warn(`SCROLL ${scrollpos}`);
-      //     var Y = window.scrollY;
-      //     console.log(Y);
-      //   } else {
-      //     scrollpos = document.body.getBoundingClientRect().top;
-      //     var Y = window.scrollY;
-      //     scrollpos = scrollpos + Y;
-      //     console.log("ABAJO");
-      //     console.warn(`SCROLL ${scrollpos}`);
-      //     console.log(Y);
-      //   }
-      // });
       const menu = document.querySelector(".menu");
       const container = document.querySelector(".container");
       let caja = container.clientHeight;
       var scrollPos = 0;
       console.log(caja);
-      // console.log(window.scrollY);
-      window.addEventListener("scroll", function () {
-        // if (caja > window.scrollY)
-        // console.log(window.scrollY);
 
+      window.addEventListener("scroll", function () {
         if (caja < window.scrollY) {
-          menu.style.background = "#555";
+          menu.style.background = "#e6af24";
           if (document.body.getBoundingClientRect().top > scrollPos)
             menu.classList.add("active");
           else menu.classList.remove("active");
@@ -538,9 +512,6 @@
             menu.classList.add("active");
           else menu.classList.remove("active");
         }
-        //   if (document.body.getBoundingClientRect().top > scrollPos)
-        // menu.classList.add("active");
-        // else menu.classList.remove("active");
         scrollPos = document.body.getBoundingClientRect().top;
       });
     </script>
