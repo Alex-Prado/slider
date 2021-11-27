@@ -13,7 +13,67 @@
   --colorclaro: #fff;
   --colorfondo: #f9f9f9;
 }
-
+.favoritos {
+  width: 40%;
+  position: fixed;
+  right: -40%;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  z-index: 300;
+  background: white;
+  /* top: 60px; */
+  transition: 0.5s ease;
+}
+.favoritos h1 {
+  font-weight: 500;
+  font-size: 25px;
+  padding: 0 5px;
+  letter-spacing: 1px;
+}
+.favoritos.active {
+  right: 0;
+  visibility: visible;
+}
+.favoritos .card-favoritos {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  position: relative;
+  padding: 5px;
+}
+.favoritos .card-favoritos img {
+  width: 25%;
+  height: 100%;
+  background: yellow;
+  object-fit: contain;
+}
+.card-descripcion {
+  width: 80%;
+  height: 100%;
+  padding: 0 10px;
+  position: relative;
+}
+.card-descripcion h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+.card-descripcion p {
+  font-size: 13px;
+  font-weight: 300;
+}
+.card-descripcion .btn {
+  text-align: start;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.card-descripcion .btn i {
+  border: 1px solid grey;
+  padding: 5px 10px;
+}
 .modal {
   position: fixed;
   width: 100%;
@@ -44,6 +104,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   padding: 15px;
 }
 .card-modal .card-header {
@@ -51,14 +112,15 @@
   position: relative;
   width: 100%;
   height: 50%;
+  background: #f9f9f9;
 }
-.card-modal .card-header .cerrar {
+.cerrar {
   position: absolute;
 
   padding: 6px;
   border: 1px solid grey;
-  top: 0px;
-  right: 0px;
+  top: 5px;
+  right: 5px;
   cursor: pointer;
 }
 .card-modal .card-header .card-opciones {
@@ -457,9 +519,14 @@
 45%; } */
 }
 @media (max-width: 850px) {
+  .favoritos{
+    width: 100%;
+    right: -100%;
+  }
   .content-modal {
     width: 100%;
     right: -100%;
+    /* Marisela#1402 */
   }
   .card-modal .card-header {
     /* width: 100%; */
@@ -492,14 +559,20 @@
   }
   .contenedor .sub form {
     flex-direction: column;
-    width: 90%;
-    margin: 0 auto;
-    margin: 25px;
+    width: 100%;
+    /* margin: 0 auto;
+    margin: 25px; */
+  }
+  .contenedor .sub form input {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 0;
   }
   .contenedor .sub form .btn {
-    padding: 2px 60px;
+    padding: 5px 10px;
     background: var(--colortexto);
     color: var(--colorclaro);
+    width: 100%;
   }
   /* .descripcion {
     width: 45%;
