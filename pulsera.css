@@ -71,11 +71,11 @@ body {
   visibility: visible;
 }
 .menu h1 {
-  color: var(--colorclaro);
+  color: var(--colortexto);
 }
 .menu i {
   font-size: 20px;
-  color: var(--colorclaro);
+  color: var(--colortexto);
 }
 .acciones {
   position: absolute;
@@ -95,7 +95,8 @@ body {
   /* background: #fff; */
   cursor: pointer;
   border: none;
-  /* border-radius: 50%; */
+  /* border-radius: 50%;
+  border-radius: 5px; */
   color: var(--colortexto);
   /* box-shadow: -2px 2px 5px #000; */
   font-size: 35px;
@@ -106,9 +107,7 @@ body {
   bottom: 0;
 }
 .acciones .slider:hover {
-  /* background: goldenrod; */
   color: #fff;
-  /* border: 1px solid #ddd; */
 }
 .content {
   position: absolute;
@@ -131,7 +130,7 @@ body {
 .content .img {
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, var(--colorprincipal), white);
+  background: linear-gradient(45deg, var(--colorclaro), var(--colorprincipal));
 }
 
 .content .card {
@@ -152,12 +151,13 @@ body {
   margin-top: 10px;
   position: relative;
   display: inline-block;
+  /* border-radius: 5px; */
   border-radius: 5px;
 }
 .content .card .btn:hover {
   background: var(--colorprincipal);
   color: var(--colorclaro);
-  border: 1px solid var(--colorclaro);
+  border: 1px solid var(--colorprincipal);
 }
 .content.active .card {
   left: 15%;
@@ -166,8 +166,10 @@ body {
 .card img {
   margin-left: 15px;
   width: 40%;
+  /* position: relative; */
   filter: drop-shadow(-5px 7px 6px #000);
 }
+
 .card .texto {
   width: 100%;
   color: var(--colortexto);
@@ -198,7 +200,7 @@ body {
   margin: 10px auto;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 .contenedor .title {
   position: relative;
@@ -235,16 +237,18 @@ body {
   background: #fff;
   box-shadow: 2px 3px 6px #999;
   overflow: hidden;
+  /* border-radius: 10px; */
+  border-radius: 5px;
 }
-.contenido .tarjeta::after {
+/* .contenido .tarjeta::after {
   content: "";
   position: absolute;
   width: 98%;
-  height: 16%;
+  height: 2px;
   background: var(--colorprincipal);
   bottom: -17%;
   transition: 0.5s ease-in-out;
-}
+} */
 .contenido .tarjeta .oferta {
   width: 160px;
   height: 160px;
@@ -253,6 +257,7 @@ body {
   right: -80px;
   top: -80px;
   border-radius: 50%;
+  /* border-radius: 5px; */
   line-height: 230px;
   color: var(--colorclaro);
   padding-left: 30px;
@@ -274,20 +279,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  /* width: 40%; */
   transition: 0.5s ease-in-out;
   position: absolute;
   bottom: -70px;
   z-index: 10;
-  color: var(--colorclaro);
-  /* font-weight: 300; */
+  color: var(--colortexto);
+  background: var(--colorclaro);
+  padding: 0 10px;
+  border: 1px solid grey;
+  right: 5px;
 }
 .descripcion h4 {
-  font-weight: 300;
+  font-weight: 500;
   margin: 2px;
+  text-transform: uppercase;
 }
 .descripcion h2 {
-  font-weight: 500;
+  font-weight: 600;
   margin: 2px;
 }
 .buttons {
@@ -303,10 +312,10 @@ body {
   color: #fff;
   padding: 10px 15px;
   margin-top: 15px;
+  border-radius: 5px;
 }
 .tarjeta:hover img {
   transform: scale(0.8) translate(-50px, -30px);
-  /* filter: drop-shadow(-5px 7px 6px #000); */
 }
 .tarjeta:hover .descripcion {
   bottom: 5px;
@@ -314,8 +323,70 @@ body {
 .tarjeta:hover .buttons {
   right: 5px;
 }
-.tarjeta:hover::after {
-  bottom: 1%;
+.contenedor .sub {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  background: #cbc7c7;
+  padding: 20px;
+  text-align: center;
+  color: var(--colortexto);
+}
+.contenedor .sub form {
+  height: 50px;
+  margin: 15px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor .sub form input {
+  outline: none;
+  padding: 10px 60px;
+  height: 100%;
+  border: 1px solid var(--colortexto);
+  /* margin: 15px 0; */
+}
+.contenedor .sub form .btn {
+  padding: 10px 60px;
+  height: 100%;
+  border: 1px solid var(--colortexto);
+  line-height: 28px;
+  cursor: pointer;
+  background: var(--colorclaro);
+}
+.contenedor .sub form .btn:hover {
+  background: var(--colorprincipal);
+}
+.contenedor .footer {
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 15px auto;
+  color: var(--colortexto);
+}
+.footer .card-footer {
+  display: flex;
+  align-items: self-start;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 15px;
+  padding-left: 45px;
+}
+.footer .card-footer h1 {
+  font-weight: 500;
+}
+.footer .card-footer p {
+  padding: 10px 0;
+}
+.footer .card-footer p i {
+  width: 30px;
+  height: 20px;
 }
 @media (max-width: 850px) {
   .content.active .card {
@@ -358,7 +429,14 @@ body {
   .texto p {
     font-size: 15px;
   }
-  .descripcion {
-    width: 45%;
+  .contenedor .sub {
+    height: 380px;
   }
+  .contenedor .sub form {
+    flex-direction: column;
+    margin: 25px;
+  }
+  /* .descripcion {
+    width: 45%;
+  } */
 }
