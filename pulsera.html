@@ -25,10 +25,10 @@
       <div class="card-modal">
         <div class="card-header">
           <div class="card-opciones">
-            <img src="img/32.png" alt="" />
-            <img src="img/32.png" alt="" />
-            <img src="img/32.png" alt="" />
-            <img src="img/32.png" alt="" />
+            <img class="detalle" src="img/32.png" alt="" />
+            <img class="detalle" src="img/33.png" alt="" />
+            <img class="detalle" src="img/30.png" alt="" />
+            <img class="detalle" src="img/31.png" alt="" />
             <!-- <img src="img/32.png" alt="" /> -->
           </div>
           <i
@@ -36,7 +36,7 @@
             onclick="detalles();"
             aria-hidden="true"
           ></i>
-          <img src="img/31.png" alt="" />
+          <img class="principal" src="img/31.png" alt="" />
         </div>
         <div class="card-body">
           <h1>Nuevo Producto</h1>
@@ -50,23 +50,17 @@
           <span class="btn">Agregar al carrito</span>
         </div>
       </div>
-      <!-- <span class="btn" onclick="detalles();">cerrar</span> -->
-      <!-- <h3>Producto</h3> -->
-      <!-- <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
-        asperiores error sapiente. Laudantium hic, ea molestias atque et
-        consequuntur obcaecati molestiae tempore illum at optio porro! Dolores
-        ea quae neque reiciendis earum. Quibusdam, quas excepturi corporis
-        provident veritatis sint deserunt!
-      </p> -->
-      <!-- <img src="img/11.png" alt="" /> -->
     </div>
     <!-- ------------------------------- -->
     <!-- -----------MODAL FAVORITOS-------------------- -->
     <!-- ------------------------------- -->
     <div class="favoritos">
-      <h1>MIS DESEOS</h1>
-      <i class="cerrar fa fa-times" onclick="favorito();" aria-hidden="true"></i>
+      <h1>FAVORITOS</h1>
+      <i
+        class="cerrar fa fa-times"
+        onclick="favorito();"
+        aria-hidden="true"
+      ></i>
       <div class="card-favoritos">
         <img src="img/31.png" alt="" />
         <div class="card-descripcion">
@@ -101,16 +95,94 @@
         </div>
       </div>
     </div>
+    <!-- ------------------------------- -->
+    <!-- -----------MODAL CARRITO-------------------- -->
+    <!-- ------------------------------- -->
+    <div class="carrito">
+      <h1><small>Total $</small>135.00</h1>
+      <span class="btn-compra">COMPRAR</span>
+      <i
+        class="cerrar fa fa-times"
+        onclick="carrCompra();"
+        aria-hidden="true"
+      ></i>
+      <div class="card-carrito">
+        <img src="img/31.png" alt="" />
+        <div class="carrito-descripcion">
+          <h2>Producto</h2>
+          <div class="stars">
+            <i class="active fa fa-star" aria-hidden="true"></i>
+            <i class="active fa fa-star" aria-hidden="true"></i>
+            <i class="active fa fa-star" aria-hidden="true"></i>
+            <i class="active fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </div>
+          <h2>$<small>45.00</small></h2>
+          <div class="btn">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <!-- <i class="fa fa-cart-plus" aria-hidden="true"></i> -->
+          </div>
+        </div>
+      </div>
+      <!-- --------------------------- -->
+      <!-- --------------------------- -->
+      <div class="card-carrito">
+        <img src="img/32.png" alt="" />
+        <div class="carrito-descripcion">
+          <h2>Producto</h2>
+          <div class="stars">
+            <i class="active fa fa-star" aria-hidden="true"></i>
+            <i class="active fa fa-star" aria-hidden="true"></i>
+            <i class="active fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </div>
+          <h2>$<small>45.00</small></h2>
+          <div class="btn">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <!-- <i class="fa fa-cart-plus" aria-hidden="true"></i> -->
+          </div>
+        </div>
+      </div>
+      <!-- --------------------------- -->
+      <!-- --------------------------- -->
+      <div class="card-carrito">
+        <img src="img/33.png" alt="" />
+        <div class="carrito-descripcion">
+          <h2>Producto</h2>
+          <div class="stars">
+            <i class="active fa fa-star" aria-hidden="true"></i>
+            <i class="active fa fa-star" aria-hidden="true"></i>
+            <i class="active fa fa-star" aria-hidden="true"></i>
+            <i class="active fa fa-star" aria-hidden="true"></i>
+            <i class="active fa fa-star" aria-hidden="true"></i>
+          </div>
+          <h2>$<small>45.00</small></h2>
+          <div class="btn">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <!-- <i class="fa fa-cart-plus" aria-hidden="true"></i> -->
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- -------------------------------- -->
-    <!-- -------------------------------- -->
+    <!-- ------PORTADA------------------ -->
     <!-- -------------------------------- -->
     <div class="container">
       <div class="menu active">
         <h1 class="nombre">ValFer</h1>
         <div class="bar-right">
-          <i class="btn fa fa-heart" aria-hidden="true"></i>
-          <i class="btn fa fa-cart-plus" aria-hidden="true"></i>
+          <i
+            class="btn fa fa-heart"
+            onclick="favorito();"
+            aria-hidden="true"
+          ></i>
+          <i
+            class="btn fa fa-cart-plus"
+            onclick="carrCompra();"
+            aria-hidden="true"
+          ></i>
           <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
       </div>
@@ -172,9 +244,6 @@
     <!-- -------------------------------- -->
     <!-- -------------------------------- -->
     <!-- -------------------------------- -->
-
-    <!-- -------------------------------- -->
-    <!-- -------------------------------- -->
     <!-- --------------------- -->
     <!-- LOS MAS NUEVO -->
     <!-- --------------------- -->
@@ -189,7 +258,7 @@
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -214,7 +283,7 @@
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -239,7 +308,7 @@
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -265,7 +334,7 @@
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -286,11 +355,11 @@
         </div>
         <div class="tarjeta">
           <h3>Producto</h3>
-          <img src="img/11.png" alt="" />
+          <img src="img/21.png" alt="" />
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -312,11 +381,11 @@
         <div class="tarjeta">
           <span class="oferta">30%</span>
           <h3>Producto</h3>
-          <img src="img/11.png" alt="" />
+          <img src="img/22.png" alt="" />
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -352,7 +421,7 @@
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -377,7 +446,7 @@
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -403,7 +472,7 @@
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -428,7 +497,7 @@
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -453,7 +522,7 @@
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -478,7 +547,7 @@
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -504,7 +573,7 @@
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -529,7 +598,7 @@
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
-              onclick="detalles();"
+              onclick="carrCompra();"
               aria-hidden="true"
             ></i>
             <i
@@ -628,7 +697,22 @@
     <script>
       const modal = document.querySelector(".modal");
       const favoritos = document.querySelector(".favoritos");
+      const carrito = document.querySelector(".carrito");
       const contentModal = document.querySelector(".content-modal");
+      const detalle = document.querySelectorAll(".detalle");
+      const principal = document.querySelector(".principal");
+
+      detalle.forEach((det) =>
+        det.addEventListener("click", () => {
+          img = det.src.replace("http://127.0.0.1:5501/", "");
+          principal.src = img;
+          console.log(img);
+        })
+      );
+
+      function carrCompra() {
+        carrito.classList.toggle("active");
+      }
       function detalles() {
         modal.classList.toggle("active");
         contentModal.classList.toggle("active");
