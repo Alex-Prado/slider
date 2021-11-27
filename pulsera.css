@@ -11,10 +11,9 @@
   --colorprincipal: #e6af24;
   --colortexto: #555;
   --colorclaro: #fff;
+  --colorfondo: #f9f9f9;
 }
-body {
-  background: #ddd;
-}
+
 .modal {
   position: fixed;
   width: 100%;
@@ -37,20 +36,81 @@ body {
   visibility: hidden;
   transition: 0.5s ease;
 }
+.content-modal .card-modal {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+}
+.card-modal .card-header {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+.card-modal .card-header .cerrar {
+  position: absolute;
+
+  padding: 6px;
+  border: 1px solid grey;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+.card-modal .card-header .card-opciones {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background: blue; */
+  align-items: center;
+  position: relative;
+}
+.card-modal .card-header .card-opciones img {
+  position: relative;
+  width: 100%;
+  height: calc(90% / 4);
+  object-fit: contain;
+  border: 1px solid grey;
+  margin: 3px;
+}
+.card-modal .card-body {
+  width: 100%;
+}
+.card-modal .card-body h1 {
+  text-align: start;
+  font-weight: 500;
+}
+.card-modal .card-body .btn {
+  padding: 10px 15px;
+  border: none;
+  border: 1px solid var(--colortexto);
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+}
+
 .modal.active,
 .content-modal.active {
   visibility: visible;
   right: 0%;
 }
 .content-modal img {
-  width: 50%;
+  width: 63%;
+  height: 100%;
+  object-fit: contain;
 }
 .container {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: var(--colorclaro);
+  /* background: var(--colorclaro); */
 }
 .menu {
   position: fixed;
@@ -76,6 +136,9 @@ body {
 .menu i {
   font-size: 20px;
   color: var(--colortexto);
+  border: 1px solid var(--colortexto);
+  padding: 5px 6px;
+  cursor: pointer;
 }
 .acciones {
   position: absolute;
@@ -92,13 +155,9 @@ body {
   height: 35px;
   line-height: 35px;
   display: inline-block;
-  /* background: #fff; */
   cursor: pointer;
   border: none;
-  /* border-radius: 50%;
-  border-radius: 5px; */
   color: var(--colortexto);
-  /* box-shadow: -2px 2px 5px #000; */
   font-size: 35px;
   font-weight: 700;
   position: absolute;
@@ -151,7 +210,6 @@ body {
   margin-top: 10px;
   position: relative;
   display: inline-block;
-  /* border-radius: 5px; */
   border-radius: 5px;
 }
 .content .card .btn:hover {
@@ -166,7 +224,6 @@ body {
 .card img {
   margin-left: 15px;
   width: 40%;
-  /* position: relative; */
   filter: drop-shadow(-5px 7px 6px #000);
 }
 
@@ -175,14 +232,12 @@ body {
   color: var(--colortexto);
 }
 .texto .titulo {
-  /* margin-bottom: 15px; */
   text-transform: uppercase;
   font-size: 35px;
 }
 .texto p {
   font-size: 18px;
   font-weight: 300;
-  /* margin-bottom: 20px; */
 }
 /* ------------------------- */
 /* ------------------------- */
@@ -191,7 +246,6 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background: #ddd;
 }
 .contenido {
   width: 90%;
@@ -228,27 +282,17 @@ body {
   bottom: 0;
 }
 .contenido .tarjeta {
-  border: 1px solid #ddd;
-  height: 285px;
+  border: 1px solid #afa8a8;
+  height: 330px;
   display: flex;
   align-items: center;
   flex-direction: column;
   position: relative;
-  background: #fff;
-  box-shadow: 2px 3px 6px #999;
+  background: var(--colorfondo);
   overflow: hidden;
-  /* border-radius: 10px; */
   border-radius: 5px;
 }
-/* .contenido .tarjeta::after {
-  content: "";
-  position: absolute;
-  width: 98%;
-  height: 2px;
-  background: var(--colorprincipal);
-  bottom: -17%;
-  transition: 0.5s ease-in-out;
-} */
+
 .contenido .tarjeta .oferta {
   width: 160px;
   height: 160px;
@@ -257,7 +301,6 @@ body {
   right: -80px;
   top: -80px;
   border-radius: 50%;
-  /* border-radius: 5px; */
   line-height: 230px;
   color: var(--colorclaro);
   padding-left: 30px;
@@ -267,19 +310,20 @@ body {
   color: var(--colortexto);
   width: 100%;
   text-transform: uppercase;
-  margin-left: 20px;
+  padding-left: 30px;
+  padding-top: 20px;
 }
 .contenido .tarjeta img {
   width: 90%;
   transition: 0.5s ease-in-out;
   object-fit: contain;
   height: 250px;
+  filter: grayscale(0.5);
 }
 .descripcion {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 40%; */
   transition: 0.5s ease-in-out;
   position: absolute;
   bottom: -70px;
@@ -316,6 +360,7 @@ body {
 }
 .tarjeta:hover img {
   transform: scale(0.8) translate(-50px, -30px);
+  filter: grayscale(0);
 }
 .tarjeta:hover .descripcion {
   bottom: 5px;
@@ -325,16 +370,18 @@ body {
 }
 .contenedor .sub {
   width: 90%;
-  margin: 20px auto;
+  margin: 0px auto;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 200px;
-  background: #cbc7c7;
+  height: 380px;
+  background: var(--colorfondo);
   padding: 20px;
   text-align: center;
   color: var(--colortexto);
+  border: 1px solid #afa8a8;
+  border-bottom: none;
 }
 .contenedor .sub form {
   height: 50px;
@@ -367,8 +414,12 @@ body {
   display: grid;
   width: 90%;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin: 15px auto;
+  margin-inline: auto;
+  margin-bottom: 20px;
   color: var(--colortexto);
+  background: var(--colorfondo);
+  border: 1px solid #afa8a8;
+  border-top: none;
 }
 .footer .card-footer {
   display: flex;
@@ -407,6 +458,13 @@ body {
 45%; } */
 }
 @media (max-width: 850px) {
+  .content-modal {
+    width: 100%;
+  }
+  .card-modal .card-header {
+    /* width: 100%; */
+    height: 40%;
+  }
   .card img {
     margin-top: 10px;
     width: 70%;
@@ -434,7 +492,14 @@ body {
   }
   .contenedor .sub form {
     flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
     margin: 25px;
+  }
+  .contenedor .sub form .btn {
+    padding: 2px 60px;
+    background: var(--colortexto);
+    color: var(--colorclaro);
   }
   /* .descripcion {
     width: 45%;

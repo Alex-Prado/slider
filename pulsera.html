@@ -17,18 +17,42 @@
     <link rel="stylesheet" href="pulsera.css" />
   </head>
   <body>
-    <div class="modal"></div>
+    <div class="modal" onclick="detalles();"></div>
     <div class="content-modal">
-      <span class="btn" onclick="detalles();">cerrar</span>
-      <h3>Producto</h3>
-      <p>
+      <div class="card-modal">
+        <div class="card-header">
+          <div class="card-opciones">
+            <img src="img/32.png" alt="" />
+            <img src="img/32.png" alt="" />
+            <img src="img/32.png" alt="" />
+            <img src="img/32.png" alt="" />
+            <!-- <img src="img/32.png" alt="" /> -->
+          </div>
+          <i class="cerrar fa fa-times" onclick="detalles();" aria-hidden="true"></i>
+          <img src="img/31.png" alt="" />
+        </div>
+        <div class="card-body">
+          <h1>Nuevo Producto Marca</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+            veniam accusantium rem similique nam voluptate incidunt inventore
+            nesciunt consequuntur placeat, ea dolorem ipsam corporis aliquam
+            earum quia iusto cum assumenda!
+          </p>
+          <h2>$<small>45.00</small></h2>
+          <span class="btn">Agregar al carrito</span>
+        </div>
+      </div>
+      <!-- <span class="btn" onclick="detalles();">cerrar</span> -->
+      <!-- <h3>Producto</h3> -->
+      <!-- <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
         asperiores error sapiente. Laudantium hic, ea molestias atque et
         consequuntur obcaecati molestiae tempore illum at optio porro! Dolores
         ea quae neque reiciendis earum. Quibusdam, quas excepturi corporis
         provident veritatis sint deserunt!
-      </p>
-      <img src="img/11.png" alt="" />
+      </p> -->
+      <!-- <img src="img/11.png" alt="" /> -->
     </div>
 
     <div class="container">
@@ -97,6 +121,9 @@
     <!-- -------------------------------- -->
     <!-- -------------------------------- -->
     <!-- -------------------------------- -->
+    <!-- --------------------- -->
+    <!-- LOS MAS NUEVO -->
+    <!-- --------------------- -->
     <div class="contenedor">
       <div class="title">
         <h1>NUEVOS <span>PRODUCTOS</span></h1>
@@ -256,7 +283,9 @@
         </div>
       </div>
     </div>
-
+    <!-- --------------------- -->
+    <!-- LOS MAS VENDIDOS -->
+    <!-- --------------------- -->
     <div class="contenedor">
       <div class="title">
         <h1>MAS <span>VENDIDOS</span></h1>
@@ -265,7 +294,7 @@
         <div class="tarjeta">
           <span class="oferta">50%</span>
           <h3>Producto</h3>
-          <img src="img/cartera.png" alt="" />
+          <img src="img/33.png" alt="" />
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
@@ -290,7 +319,7 @@
         </div>
         <div class="tarjeta">
           <h3>Producto</h3>
-          <img src="img/zpatilla.png" alt="" />
+          <img src="img/32.png" alt="" />
           <div class="buttons">
             <i
               class="btn fa fa-cart-plus"
@@ -414,9 +443,62 @@
             <h2>$<small>45.00</small></h2>
           </div>
         </div>
+        <div class="tarjeta">
+          <span class="oferta">50%</span>
+          <h3>Producto</h3>
+          <img src="img/30.png" alt="" />
+          <div class="buttons">
+            <i
+              class="btn fa fa-cart-plus"
+              onclick="detalles();"
+              aria-hidden="true"
+            ></i>
+            <i
+              class="btn fa fa-heart"
+              onclick="detalles();"
+              aria-hidden="true"
+            ></i>
+            <i
+              class="btn fa fa-eye"
+              onclick="detalles();"
+              aria-hidden="true"
+            ></i>
+          </div>
+          <div class="descripcion">
+            <h4>precio</h4>
+            <h2>$<small>45.00</small></h2>
+          </div>
+        </div>
+        <div class="tarjeta">
+          <h3>Producto</h3>
+          <img src="img/31.png" alt="" />
+          <div class="buttons">
+            <i
+              class="btn fa fa-cart-plus"
+              onclick="detalles();"
+              aria-hidden="true"
+            ></i>
+            <i
+              class="btn fa fa-heart"
+              onclick="detalles();"
+              aria-hidden="true"
+            ></i>
+            <i
+              class="btn fa fa-eye"
+              onclick="detalles();"
+              aria-hidden="true"
+            ></i>
+          </div>
+          <div class="descripcion">
+            <h4>precio</h4>
+            <h2>$<small>45.00</small></h2>
+          </div>
+        </div>
       </div>
     </div>
-
+    <!-- --------------------- -->
+    <!-- CONTACTANOS -->
+    <!-- --------------------- -->
     <div class="contenedor">
       <div class="title">
         <h1>CONTA<span style="margin-left: 0">CTANOS</span></h1>
@@ -430,8 +512,7 @@
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
           voluptate quia doloremque voluptates, beatae ducimus sit natus impedit
-          amet ad officia quas maiores error velit labore rem rerum nobis
-          .
+          amet ad officia quas maiores error velit labore rem rerum nobis .
         </p>
       </section>
       <div class="footer">
@@ -486,6 +567,9 @@
         </div>
       </div>
     </div>
+    <!-- -------------------------------- -->
+    <!-- -------------------------------- -->
+    <!-- -------------------------------- -->
     <script src="main.js"></script>
     <script>
       const modal = document.querySelector(".modal");
