@@ -27,14 +27,18 @@
   background: white;
   transition: 0.5s ease;
   padding: 0 15px;
+  color: var(--colortexto);
+  /* box-shadow: -5px 0 5px var(--colortexto); */
 }
 .favoritos h1,
 .carrito h1 {
   font-weight: 500;
-  font-size: 25px;
+  font-size: 16px;
   padding: 0 5px;
   letter-spacing: 1px;
   text-align: center;
+  height: 40px;
+  line-height: 40px;
 }
 .carrito .btn-compra {
   border: 1px solid var(--colorborde);
@@ -109,6 +113,7 @@
   z-index: 200;
   visibility: hidden;
   transition: 0.5s ease;
+  background: #8080806e;
 }
 .content-modal {
   position: fixed;
@@ -169,6 +174,7 @@
 }
 .card-modal .card-body {
   width: 100%;
+  color: var(--colortexto);
 }
 .card-modal .card-body h1 {
   text-align: start;
@@ -224,11 +230,11 @@
 /* ------------------------- */
 .wraper {
   width: 75px;
-  /* height: 50px; */
+  height: 20px;
 }
 path {
-  stroke: black;
-  fill: black;
+  stroke: var(--colortexto);
+  fill: var(--colortexto);
   stroke-dasharray: 1800;
   opacity: 10;
   animation: animate 3s cubic-bezier(0, 0.23, 1, 0.1);

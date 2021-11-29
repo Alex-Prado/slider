@@ -39,11 +39,11 @@
           <img class="principal" src="img/31.png" alt="" />
         </div>
         <div class="card-body">
-          <h1>Nuevo Producto</h1>
+          <h1>Detalle Producto</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
             veniam accusantium rem similique nam voluptate incidunt inventore
-            nesciunt consequuntur placeat, ea dolorem ipsam corporis aliquam
+            nesciunt consequuntur placeat, aliquam
             earum quia iusto cum assumenda!
           </p>
           <h2>$<small>45.00</small></h2>
@@ -185,13 +185,13 @@
             x="0px"
             y="0px"
             viewBox="0 0 851 316"
-            style="enable-background: new 0 0 851 316"
+           
             xml:space="preserve"
           >
             <style type="text/css">
               .st0 {
-                fill: #000;
-                stroke: #000;
+                fill: #555;
+                stroke: #555;
                 stroke-width: 3;
                 stroke-miterlimit: 10;
               }
@@ -870,6 +870,8 @@
 
       function carrCompra() {
         carrito.classList.toggle("active");
+        modal.classList.toggle("active");
+
       }
       function detalles() {
         modal.classList.toggle("active");
@@ -877,6 +879,8 @@
       }
       function favorito() {
         favoritos.classList.toggle("active");
+        modal.classList.toggle("active");
+
       }
 
       const menu = document.querySelector(".menu");
