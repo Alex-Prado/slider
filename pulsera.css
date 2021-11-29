@@ -26,6 +26,7 @@
   z-index: 300;
   background: white;
   transition: 0.5s ease;
+  padding: 0 15px;
 }
 .favoritos h1,
 .carrito h1 {
@@ -146,7 +147,7 @@
   padding: 6px;
   border: 1px solid #afa8a8;
   top: 5px;
-  right: 5px;
+  right: 15px;
   cursor: pointer;
 }
 .card-modal .card-header .card-opciones {
@@ -218,6 +219,45 @@
   top: 0;
   visibility: visible;
 }
+/* ------------------------- */
+/* ------------------------- */
+/* ------------------------- */
+.wraper {
+  width: 75px;
+  /* height: 50px; */
+}
+path {
+  stroke: black;
+  fill: black;
+  stroke-dasharray: 1800;
+  opacity: 10;
+  animation: animate 3s cubic-bezier(0, 0.23, 1, 0.1);
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    fill: none;
+    stroke-dashoffset: 1800;
+  }
+  30% {
+    opacity: 10;
+    fill: none;
+    stroke-dashoffset: 1800;
+  }
+  90% {
+    fill: rgba(255, 255, 2555, 0);
+  }
+  100% {
+    opacity: 10;
+    fill: rgba(255, 255, 2555, 1);
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ------------------------ */
+/* ------------------------ */
+/* ------------------------ */
+/* ------------------------ */
 .menu h1 {
   color: var(--colortexto);
 }
@@ -549,16 +589,22 @@
     margin-top: 30px;
     width: 60%;
     margin-left: 0;
-  } /* .acciones { top:
+  }
+  /* .wraper {
+    width: 11%;
+    height: 25px;
+  } */
+  /* .acciones { top:
 45%; } */
-}
-@media (max-width: 850px) {
+  /* }
+@media (max-width: 850px) { */
   .favoritos,
   .carrito {
     width: 100%;
     right: -100%;
   }
-  .favoritos h1, .carrito h1{
+  .favoritos h1,
+  .carrito h1 {
     font-size: 18px;
     height: 40px;
     line-height: 40px;
@@ -600,21 +646,30 @@
   .contenedor .sub form {
     flex-direction: column;
     width: 100%;
+    height: 80px;
     /* margin: 0 auto;
     margin: 25px; */
   }
   .contenedor .sub form input {
     width: 100%;
     padding: 10px 10px;
-    margin: 0;
+    margin: 10px 0;
   }
   .contenedor .sub form .btn {
     padding: 5px 10px;
     background: var(--colortexto);
     color: var(--colorclaro);
     width: 100%;
+    margin: 5px 0 20px 0;
+    border-radius: 5px;
   }
   /* .descripcion {
     width: 45%;
   } */
 }
+/* @media (max-width: 600px) {
+  .wraper {
+    width: 20%;
+    height: 15px;
+  }
+} */
