@@ -1,3 +1,10 @@
+import { persona, colegio } from "./prueba.js";
+// console.log(saludo("benja"));
+const dato = new persona("alex", "25");
+dato.mostrar();
+
+colegio.mostrardato();
+
 const slider = document.querySelectorAll(".slider");
 const content = document.querySelectorAll(".content");
 let contador = 0;
@@ -21,7 +28,16 @@ slider.forEach((slid) =>
       }
     }
     content[contador].classList.add("active");
-    // console.log(content.length);
-    // console.log(contador);
   })
 );
+
+// let persona = () => {
+//   nombre: "Alex";
+//   edad: 20;
+//   datos: () => {
+//     return `nombre: ${nombre} edad: ${edad}`;
+//   };
+// };
+
+// console.log({nombre});
+// console.log(tarea);
