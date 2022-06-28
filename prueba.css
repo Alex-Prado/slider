@@ -80,6 +80,7 @@
   margin: 0 15px;
   border-radius: 50%;
   border: 1px solid #ddd;
+  background-color: #fff;
 }
 .botones .aqui:hover {
   background: #000;

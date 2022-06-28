@@ -1,9 +1,9 @@
-import { persona, colegio } from "./prueba.js";
+// import { persona, colegio } from "./prueba.js";
 // console.log(saludo("benja"));
-const dato = new persona("alex", "25");
-dato.mostrar();
+// const dato = new persona("alex", "25");
+// dato.mostrar();
 
-colegio.mostrardato();
+// colegio.mostrardato();
 
 const slider = document.querySelectorAll(".slider");
 const content = document.querySelectorAll(".content");
